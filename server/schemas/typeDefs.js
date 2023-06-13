@@ -9,17 +9,18 @@ type User {
 }
 
   type Auth {
-    _id: ID!
+   token: ID!
     user: User
   }
 
   type Query {
     user: [User]
+    me: User
     matchups(username: String!): [User]
   }
 
   type Mutation {
-    createUser(username: String!, email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
   }
 `;
