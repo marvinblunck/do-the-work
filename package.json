@@ -4,11 +4,11 @@
     "description": "",
     "main": "server/server.js",
     "scripts": {
-      "start": "node server/server.js --ignore client",
-      "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-      "install": "cd server && npm i && cd ../client && npm i",
+      "start": "node server/server.js --ignore flexflow-app",
+      "develop": "concurrently \"cd server && npm run watch\" \"cd flexflow-app && npm start\"",
+      "install": "cd server && npm i && cd ../flexflow-app && npm i",
       "seed": "cd server && npm run seed",
-      "build": "cd client && npm run build"
+      "build": "cd flexflow-app && npm run build"
     },
     "author": "",
     "license": "ISC",
