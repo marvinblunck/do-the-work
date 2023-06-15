@@ -1,6 +1,6 @@
 import React from 'react';
 
-function WorkoutsPage() {
+function Workout() {
   return (
     <div>
       <h1>Workouts Page</h1>
@@ -10,4 +10,4 @@ function WorkoutsPage() {
   );
 }
 
-export default WorkoutsPage;
+export default Workout;
