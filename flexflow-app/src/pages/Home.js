@@ -11,11 +11,11 @@ function Home() {
             <li><a href="/nutrition">Nutrition</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
-            <li className="auth-buttons">
+          </ul> 
+           <div className="auth-buttons">
               <button className="login-button">Login</button>
               <button className="signup-button">Sign Up</button>
-            </li>
-          </ul>
+            </div>
         </nav>
       </header>
       <main>
@@ -23,9 +23,10 @@ function Home() {
         <p>Let's start your day</p>
       </main>
       <body>
-        <h2>Today's workout plan</h2>
-        <h2>Nutrition</h2>
-        <h3>6am-8am</h3>
+        <div className="intro" >
+          <h2>Today's workout plan</h2>
+          <h3>6am-8am</h3>
+        </div>
         <div className="row1">
         <div className="box1">
           <img src="https://via.placeholder.com/150" alt="Placeholder" />
@@ -40,7 +41,10 @@ function Home() {
           <img src="https://via.placeholder.com/150" alt="Placeholder" />
         </div>
       </div>
-        <div className="row2">
+         <div className="intro2"> 
+         <h2>Nutrition</h2>
+         </div>
+         <div className="row2">
           <div className="box2">
             <img src="https://via.placeholder.com/150" alt="Placeholder" />
           </div>
@@ -56,6 +60,25 @@ function Home() {
         </div>
         
       </body>
+   <footer>
+     <p>© 2023 Gofit. All rights reserved.</p>
+        <div className="footer-columns">
+          <div className="column">
+            <p>WORKOUTS</p>
+            <p>WORKOUT VIDEOS</p>
+            <p>CUSTOM WORKOUTS</p>
+            <p>PROGRAMS</p>
+            <p>WORKOUT PROGRAMS</p>
+          </div>
+          <div className="column">
+            <p>ROUTINES</p>
+            <p>FITNESS</p>
+            <p>HEALTH</p>
+            <p>NUTRITION</p>
+            <p>HEALTHY RECIPES</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
