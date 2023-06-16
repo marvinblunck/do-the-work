@@ -21,11 +21,11 @@ export const QUERY_ME = gql`
       _id
       username
       email
-      thoughts {
+      workouts {
         _id
-        thoughtText
-        thoughtAuthor
-        createdAt
+        name
+        sets
+        reps
       }
     }
   }
