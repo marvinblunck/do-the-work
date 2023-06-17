@@ -1,4 +1,14 @@
 import React from 'react';
+import boxedwater from "../assets/boxedwater.jpg";
+import squat from "../assets/squat.jpg";
+import deadlift from "../assets/deadlift.jpg";
+import curls from "../assets/curls.jpg";
+import salad from "../assets/salad.jpg";
+import oats from "../assets/oats.jpg";
+import chicken from "../assets/chicken.jpg";
+import dessert from "../assets/dessert.jpg";
+
+
 
 function Home() {
   return (
@@ -7,7 +17,7 @@ function Home() {
         <nav>
           <ul className="menu">
             <li><a href="/">Home</a></li>
-            <li><a href="/workouts">Workouts</a></li>
+            <li><a href="/workout">Workout</a></li>
             <li><a href="/nutrition">Nutrition</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
@@ -29,16 +39,16 @@ function Home() {
         </div>
         <div className="row1">
         <div className="box1">
-          <img src="https://via.placeholder.com/150" alt="Placeholder" />
+         <a href= "/add/Lunges"><img src={boxedwater} alt="Placeholder" /></a>
         </div>
         <div className="box1">
-          <img src="https://via.placeholder.com/150" alt="Placeholder" />
+          <a href= "/add/Squats"><img src={squat} alt="Placeholder" /></a> 
         </div>
         <div className="box1">
-          <img src="https://via.placeholder.com/150" alt="Placeholder" />
+         <a href= "/add/pushups"> <img src={deadlift} alt="Placeholder" /></a>
         </div>
         <div className="box1">
-          <img src="https://via.placeholder.com/150" alt="Placeholder" />
+         <a href= "/add/bench-press"><img src={curls} alt="Placeholder" /></a> 
         </div>
       </div>
          <div className="intro2"> 
@@ -46,16 +56,16 @@ function Home() {
          </div>
          <div className="row2">
           <div className="box2">
-            <img src="https://via.placeholder.com/150" alt="Placeholder" />
+            <img src={oats} alt="Placeholder" />
           </div>
           <div className="box2">
-            <img src="https://via.placeholder.com/150" alt="Placeholder" />
+            <img src={salad} alt="Placeholder" />
           </div>
           <div className="box2">
-            <img src="https://via.placeholder.com/150" alt="Placeholder" />
+            <img src={chicken} alt="Placeholder" />
           </div>
           <div className="box2">
-            <img src="https://via.placeholder.com/150" alt="Placeholder" />
+            <img src={dessert} alt="Placeholder" />
           </div>
         </div>
         
