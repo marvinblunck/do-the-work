@@ -15,21 +15,22 @@ function Home() {
     <div className="homepage">
       <header>
         <nav>
+ <h1><span className="highlight">Gofit</span></h1>
           <ul className="menu">
-            <li><a href="/">Home</a></li>
+            <li><a href="/home">Home</a></li>
             <li><a href="/workout">Workout</a></li>
             <li><a href="/nutrition">Nutrition</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul> 
-           <div className="auth-buttons">
-              <button className="login-button">Login</button>
-              <button className="signup-button">Sign Up</button>
-            </div>
+            <div className="auth-buttons">
+              <button className="login-button"><a href="/login">Login</a></button>
+              <button className="signup-button"><a href="/signup">Sign Up</a></button>
+           </div>
         </nav>
       </header>
       <main>
-        <h1>Hello, Welcome to <span className="highlight">Gofit</span></h1>
+        {/* <h1>Hello, Welcome to <span className="highlight">Gofit</span></h1> */}
         <p>Let's start your day</p>
       </main>
       <body>
@@ -39,16 +40,16 @@ function Home() {
         </div>
         <div className="row1">
         <div className="box1">
-         <a href= "/add/Lunges"><img src={boxedwater} alt="Placeholder" /></a>
+         <a href= "/add/Lunges"><img src={boxedwater} alt="Placeholder" data-text="Lunges" /></a>
         </div>
         <div className="box1">
-          <a href= "/add/Squats"><img src={squat} alt="Placeholder" /></a> 
+          <a href= "/add/Squats"><img src={squat} alt="Placeholder"data-text="Squats"  /></a> 
         </div>
         <div className="box1">
-         <a href= "/add/pushups"> <img src={deadlift} alt="Placeholder" /></a>
+         <a href= "/add/pushups"> <img src={deadlift} alt="Placeholder" data-text="Pushups" /></a>
         </div>
         <div className="box1">
-         <a href= "/add/bench-press"><img src={curls} alt="Placeholder" /></a> 
+         <a href= "/add/bench-press"><img src={curls} alt="Placeholder" data-text="Bench Press"/></a> 
         </div>
       </div>
          <div className="intro2"> 
@@ -71,7 +72,9 @@ function Home() {
         
       </body>
    <footer>
+    <div className="footer-rights"> 
      <p>© 2023 Gofit. All rights reserved.</p>
+     </div>
         <div className="footer-columns">
           <div className="column">
             <p>WORKOUTS</p>
