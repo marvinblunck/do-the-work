@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
-
+import workGirl from './workoutgirl.jpg';
 import Auth from '../utils/auth';
 
 const Signup = () => {
@@ -39,11 +39,14 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
-          <div className="card-body">
+    <main className="signup-main">
+      <div className='background-image'>
+            <img className="workgirl-pic" src={workGirl}/> 
+      </div>
+      <div className="signup-container">
+        <div className="signup-box">
+          <h4 className="signup-heading">Sign Up</h4>
+          <div className="signup-form">
             {data ? (
               <p>
                 Success! You may now head{' '}
@@ -69,7 +72,7 @@ const Signup = () => {
                 />
                 <input
                   className="form-input"
-                  placeholder="******"
+                  placeholder="**"
                   name="password"
                   type="password"
                   value={formState.password}
