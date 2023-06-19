@@ -1,7 +1,7 @@
 import React from 'react';
 import "./About.css";
-import { useMutation, useQuery } from '@apollo/client';
-import { QUERY_ME } from '../utils/queries';
+// import { useMutation, useQuery } from '@apollo/client';
+// import { QUERY_ME } from '../utils/queries';
 
 function About() {
   return (
