@@ -56,4 +56,4 @@ console.log(data)
   );
 }
 
-export default Workout;
+export default Nutrition;
