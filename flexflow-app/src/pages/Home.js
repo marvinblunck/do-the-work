@@ -26,6 +26,7 @@ function Home() {
             <div className="auth-buttons">
               <button className="login-button"><a href="/login">Login</a></button>
               <button className="signup-button"><a href="/signup">Sign Up</a></button>
+              <button className="signout-button"><a href="/signup">Sign Out</a></button>
            </div>
         </nav>
       </header>
