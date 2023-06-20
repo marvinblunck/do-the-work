@@ -1,8 +1,15 @@
  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
-body {
+/* body {
   display: flex;
   justify-content: center;
+} */
+
+.aboutpage
+{
+ display: flex;
+  justify-content: center;
+
 }
 
 p {
