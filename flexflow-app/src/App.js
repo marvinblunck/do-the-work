@@ -14,7 +14,11 @@ import Signup from './pages/Signup'
 import Profile from './pages/Profile'
 import Workout from './pages/Workout'
 import Addworkout from './pages/Addworkout'
+import Addnutrition from './pages/Addnutrition'
+import Nutrition from './pages/Nutrition';
 import About from './pages/About'
+// import Header from './components/Header'
+import Nav from './components/Nav'
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -46,6 +50,7 @@ function App() {
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           {/* <Header /> */}
+          <Nav />
           <div className="container">
             <Routes>
               <Route 
@@ -65,11 +70,23 @@ function App() {
                 element={<Profile />}
               />
               <Route 
+                path="/signup" 
+                element={<Signup />}
+              />
+              <Route 
+                path="/nutrition" 
+                element={<Nutrition />}
+              />
+              <Route 
+                path="/nutrition/:name" 
+                element={<Addnutrition />}
+              />
+              <Route 
                 path="/workout" 
                 element={<Workout />}
               />
               <Route 
-                path="/add/:name" 
+                path="/workout/:name" 
                 element={<Addworkout/>}
               />
               <Route 

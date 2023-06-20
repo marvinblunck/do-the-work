@@ -4,7 +4,7 @@ import { useMutation, useQuery } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
 
 
-function Workout() {
+function Nutrition() {
   const { loading, data } = useQuery(QUERY_ME);
 console.log(data)
   const userData = data?.me || {};
@@ -25,7 +25,8 @@ console.log(data)
   // ]}
   return (
     <div>
-      <h1 class="workoutTitle">Workouts Page</h1>
+      <h1>Nutrition Page</h1>
+      
       {/* Add your workouts content and components */}
       {/* <div class="workoutGrid">
         <div class="workoutDay">
@@ -41,13 +42,13 @@ console.log(data)
           <p>Reps: 5</p>
         </div>
       </div> */}
-       <div class="workoutGrid">
-        {userData?.workouts?.map(workout => (
-        <div class="workoutDay">
-          <h2>{workout.day}</h2>
-          <p>Name: {workout.name}</p>
-          <p>Sets: {workout.sets}</p>
-          <p>Reps: {workout.reps}</p>
+       <div class="nutritionGrid">
+        {userData?.nutrition?.map(nutrition => (
+        <div class="nutritionDay">
+          <h2>{nutrition.day}</h2>
+          <p>Sleep: {nutrition.sleep}</p>
+          <p>Water: {nutrition.water}</p>
+          <p>Weight: {nutrition.weight}</p>
         </div>
         ))}
       </div>
@@ -55,4 +56,4 @@ console.log(data)
   );
 }
 
-export default Workout;
+export default Nutrition;

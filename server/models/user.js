@@ -19,12 +19,18 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  workout: [
+  workouts: [
     {
       type: Schema.Types.ObjectId,
       ref: 'workout',
     },
   ],
+  nutrition: [
+    {
+    type: Schema.Types.ObjectId,
+    ref: 'nutrition',
+  }
+]
 });
 
 userSchema.pre('save', async function (next) {

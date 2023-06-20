@@ -23,4 +23,24 @@ export const ADD_USER = gql`
     }
   }
 `;
+export const ADD_WORKOUT = gql`
+mutation AddWorkout($name: String!, $reps: Int!, $sets: Int!) {
+  addWorkout(name: $name, reps: $reps, sets: $sets) {
+    _id
+    name
+    reps
+    sets
+  }
+}
+`;
 
+export const ADD_NUTRITION = gql`
+mutation AddNutrition($sleep: Int!, $water: Int!, $weight: Int!) {
+  addNutrition(sleep:$sleep, water: $water, weight: $weight) {
+    _id
+    sleep
+    water
+    weight 
+  }
+}
+`;

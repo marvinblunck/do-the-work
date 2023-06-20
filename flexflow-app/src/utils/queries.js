@@ -27,6 +27,12 @@ export const QUERY_ME = gql`
         sets
         reps
       }
+      nutrition{
+        _id
+        sleep
+        water
+        weight
+      }
     }
   }
 `;
