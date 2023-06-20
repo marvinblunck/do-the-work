@@ -7,7 +7,7 @@ import salad from "../assets/salad.jpg";
 import oats from "../assets/oats.jpg";
 import chicken from "../assets/chicken.jpg";
 import dessert from "../assets/dessert.jpg";
-
+import Auth from "../utils/auth"
 
 
 function Home() {
@@ -24,9 +24,14 @@ function Home() {
             <li><a href="/contact">Contact</a></li>
           </ul> 
             <div className="auth-buttons">
-              <button className="login-button"><a href="/login">Login</a></button>
+              {Auth.loggedIn() ? (
+                <button onClick={Auth.logout} className="signout-button"><a href="#">Sign Out</a></button>
+              ): (
+                <>
+                <button className="login-button"><a href="/login">Login</a></button>
               <button className="signup-button"><a href="/signup">Sign Up</a></button>
-              <button className="signout-button"><a href="/signup">Sign Out</a></button>
+                </>
+              )}
            </div>
         </nav>
       </header>
@@ -41,16 +46,16 @@ function Home() {
         </div>
         <div className="row1">
         <div className="box1">
-         <a href= "/add/Lunges"><img src={boxedwater} alt="Placeholder" data-text="Lunges" /></a>
+         <a href= "/workout/Lunges"><img src={boxedwater} alt="Placeholder" data-text="Lunges" /></a>
         </div>
         <div className="box1">
-          <a href= "/add/Squats"><img src={squat} alt="Placeholder"data-text="Squats"  /></a> 
+          <a href= "/workout/Squats"><img src={squat} alt="Placeholder"data-text="Squats"  /></a> 
         </div>
         <div className="box1">
-         <a href= "/add/pushups"> <img src={deadlift} alt="Placeholder" data-text="Pushups" /></a>
+         <a href= "/workout/pushups"> <img src={deadlift} alt="Placeholder" data-text="Pushups" /></a>
         </div>
         <div className="box1">
-         <a href= "/add/bench-press"><img src={curls} alt="Placeholder" data-text="Bench Press"/></a> 
+         <a href= "/workout/bench-press"><img src={curls} alt="Placeholder" data-text="Bench Press"/></a> 
         </div>
       </div>
          <div className="intro2"> 
@@ -58,16 +63,16 @@ function Home() {
          </div>
          <div className="row2">
           <div className="box2">
-            <img src={oats} alt="Placeholder" />
+            <a href= "/nutrition/sleep"><img src={oats} alt="Placeholder" /></a>
           </div>
           <div className="box2">
-            <img src={salad} alt="Placeholder" />
+          <a href= "/nutrition/food"> <img src={salad} alt="Placeholder" /></a>
           </div>
           <div className="box2">
-            <img src={chicken} alt="Placeholder" />
+          <a href= "/nutrition/weight"> <img src={chicken} alt="Placeholder" /></a>
           </div>
           <div className="box2">
-            <img src={dessert} alt="Placeholder" />
+          <a href= "/nutrition/water"><img src={dessert} alt="Placeholder" /></a>
           </div>
         </div>
         

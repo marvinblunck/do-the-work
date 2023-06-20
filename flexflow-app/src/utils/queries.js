@@ -29,7 +29,6 @@ export const QUERY_ME = gql`
       }
       nutrition{
         _id
-        name
         sleep
         water
         weight
