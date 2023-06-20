@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useMutation, useQuery } from '@apollo/client';
 import { ADD_WORKOUT } from '../utils/mutations';
+import "./Workout.css";
+
 function Profile() {
   let { name } = useParams();
   const [addWorkout, { error }] = useMutation(ADD_WORKOUT)
@@ -21,17 +23,17 @@ function Profile() {
   };
   return (
     <div>
-      <h1> Add Workout</h1>
-      <h3> {name}</h3>
-      <div>
-        <label>Reps</label>
-        <input value={reps} onChange={(e) => setReps(e.target.value)}></input>
+      <h1 className="title"> Add Workout</h1>
+      <h3 className="name"> {name}</h3>
+      <div className="inputContainer">
+        <label className="label">Reps</label>
+        <input className="input" value={reps} onChange={(e) => setReps(e.target.value)}></input>
       </div>
-      <div>
-        <label>Sets</label>
-        <input value={sets} onChange={(e) => setSets(e.target.value)}></input>
+      <div className="inputContainer">
+        <label className="label">Sets</label>
+        <input className="input" value={sets} onChange={(e) => setSets(e.target.value)}></input>
       </div>
-      <button onClick={saveWorkout}>Save</button>
+      <button className="saveButton" onClick={saveWorkout}>Save</button>
     </div>
   )
 

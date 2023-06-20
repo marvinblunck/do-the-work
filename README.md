@@ -6,9 +6,6 @@
 3. [Usage](#usage)
 4. [Contributors](#contributors)
 5. [Credits](#credits)
-6. [Napkin Idea](#napkin-idea)
-7. [Future Development](#future-development)
-7. [Feedback](#feedback)
 
 ## Description
 GoFit is a personal tool which is used to track your workouts to keep on being productive.
@@ -32,6 +29,3 @@ All needed is an account.
 [Amari Johnson](https://github.com/asjohnson8735)
 
 ## Credits
-
-
-## Future Development
