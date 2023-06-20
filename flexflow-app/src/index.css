@@ -11,8 +11,7 @@ nav {
       display: flex;
         padding: 10px;
         /* background-color: rgb(25, 31, 109); */
-        justify-content: space-between;
-        
+        justify-content: space-between;  
 }
 
 /* nav ul {
@@ -63,7 +62,6 @@ nav ul.menu li a:hover {
 .auth-buttons {
   display: flex;
   align-items: center;
-  margin-top: -100px;
 }
 
 .auth-buttons button {
@@ -103,7 +101,6 @@ main {
 
 h1 {
   font-size: 32px;
-  padding-bottom: 6%;
 }
 
 h2 {

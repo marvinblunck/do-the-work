@@ -17,6 +17,8 @@ import Addworkout from './pages/Addworkout'
 import Addnutrition from './pages/Addnutrition'
 import Nutrition from './pages/Nutrition';
 import About from './pages/About'
+// import Header from './components/Header'
+import Nav from './components/Nav'
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -48,6 +50,7 @@ function App() {
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           {/* <Header /> */}
+          <Nav />
           <div className="container">
             <Routes>
               <Route 
