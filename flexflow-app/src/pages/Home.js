@@ -18,7 +18,7 @@ function Home() {
         <nav>
  <h1><span className="highlight">Gofit</span></h1>
           <ul className="menu">
-            <li><a href="/home">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="/workout">Workout</a></li>
             <li><a href="/nutrition">Nutrition</a></li>
             <li><a href="/about">About</a></li>
