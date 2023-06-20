@@ -7,6 +7,7 @@ type User {
   email: String
   password: String
   workouts: [Workout]
+  nutrition:[Nutrition]
 }
 type Workout{
   _id: ID
@@ -17,10 +18,9 @@ type Workout{
 
 type Nutrition{
   _id: ID
-  name: String
   sleep: Int
-  Water: Int
-  Weight: Int
+  water: Int
+  weight: Int
 }
   type Auth {
    token: ID!
@@ -37,6 +37,7 @@ type Nutrition{
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addWorkout(name: String!, reps:Int!, sets:Int!): Workout
+    addNutrition(sleep:Int!, water:Int!, weight:Int!): Nutrition
   }
 `;
 

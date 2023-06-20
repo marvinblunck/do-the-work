@@ -1,7 +1,7 @@
-const { User, Workout } = require('../models');
+const { User, Workout, Nutrition } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
-const { default: Nutrition } = require('../../flexflow-app/src/pages/Addnutrition');
+
 
 
 const resolvers = {
@@ -12,8 +12,9 @@ const resolvers = {
     me: async (parent, args, context) => {
       try {
         if (context.user) {
-          const user = await User.findOne({ _id: context.user._id }).populate("workouts")
+          const user = await User.findOne({ _id: context.user._id }).populate("workouts").populate("nutrition")
           console.log(user)
+          return user
         }
         throw new AuthenticationError("no user logged in");
       } catch (err) {
@@ -48,9 +49,9 @@ const resolvers = {
     }
     throw new AuthenticationError("no user logged in");
     },
-    addNutrition: async (parent, { name, sleep, water, weight }, context) => {
+    addNutrition: async (parent, { sleep, water, weight }, context) => {
       if (context.user){
-        const nutrition = await Nutrition.create({ name, sleep, water, weight });
+        const nutrition = await Nutrition.create({ sleep, water, weight });
       console.log(nutrition)
       const user=await User.findOneAndUpdate({_id:context.user._id}, { $push: { nutrition: nutrition._id } },{new:true})
       console.log(user)
