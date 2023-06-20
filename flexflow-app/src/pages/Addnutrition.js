@@ -11,8 +11,9 @@ function Nutrition() {
   console.log(name);
   async function saveNutrition() {
     try {
+      console.log({sleep:parseInt(sleep), water:parseInt(water), weight:parseInt(weight) })
       const { data } = await addNutrition({
-        variables: { name, sleep, water, weight }
+        variables: {sleep:parseInt(sleep), water:parseInt(water), weight:parseInt(weight) }
       })
       console.log(data)
     } catch (err) {

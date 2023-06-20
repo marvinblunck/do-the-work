@@ -25,6 +25,12 @@ const userSchema = new Schema({
       ref: 'workout',
     },
   ],
+  nutrition: [
+    {
+    type: Schema.Types.ObjectId,
+    ref: 'nutrition',
+  }
+]
 });
 
 userSchema.pre('save', async function (next) {

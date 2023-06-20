@@ -35,10 +35,9 @@ mutation AddWorkout($name: String!, $reps: Int!, $sets: Int!) {
 `;
 
 export const ADD_NUTRITION = gql`
-mutation AddNutrition($name: String!, $sleep: Int!, $water: Int!, $weight: Int!) {
-  addWorkout(name: $name, sleep: $sleep, water: $water, $weight: weight) {
+mutation AddNutrition($sleep: Int!, $water: Int!, $weight: Int!) {
+  addNutrition(sleep:$sleep, water: $water, weight: $weight) {
     _id
-    name
     sleep
     water
     weight 

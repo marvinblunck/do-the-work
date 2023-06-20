@@ -10,8 +10,9 @@ function Profile() {
   console.log(name);
   async function saveWorkout() {
     try {
+      console.log(name, reps, sets)
       const { data } = await addWorkout({
-        variables: { name, reps, sets }
+        variables: { name, reps:parseInt(reps), sets:parseInt(sets) }
       })
       console.log(data)
     } catch (err) {
