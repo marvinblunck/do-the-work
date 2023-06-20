@@ -7,6 +7,10 @@ import salad from "../assets/salad.jpg";
 import oats from "../assets/oats.jpg";
 import chicken from "../assets/chicken.jpg";
 import dessert from "../assets/dessert.jpg";
+import sleep from "../assets/sleep.jpg";
+import weight from "../assets/weight.jpg";
+import water from "../assets/water.jpg";
+import Auth from "../utils/auth"
 
 
 
@@ -42,16 +46,16 @@ function Home() {
          </div>
          <div className="row2">
           <div className="box2">
-            <a href= "/nutrition/sleep"><img src={oats} alt="Placeholder" /></a>
+            <a href= "/nutrition/sleep"><img src={sleep} alt="Placeholder" /></a>
           </div>
           <div className="box2">
           <a href= "/nutrition/food"> <img src={salad} alt="Placeholder" /></a>
           </div>
           <div className="box2">
-          <a href= "/nutrition/weight"> <img src={chicken} alt="Placeholder" /></a>
+          <a href= "/nutrition/weight"> <img src={weight} alt="Placeholder" /></a>
           </div>
           <div className="box2">
-          <a href= "/nutrition/water"><img src={dessert} alt="Placeholder" /></a>
+          <a href= "/nutrition/water"><img src={water} alt="Placeholder" /></a>
           </div>
         </div>
         
