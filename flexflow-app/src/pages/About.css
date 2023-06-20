@@ -1,12 +1,8 @@
  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
-body {
-  display: flex;
-  justify-content: center;
-}
 
-p {
-  max-width: 800px;
-  /* Adjust the value based on your desired text width */
-  margin: 0;
-}
+ .aboutinfo{
+display: flex;
+justify-content: center;
+max-width: 150px;
+ }
