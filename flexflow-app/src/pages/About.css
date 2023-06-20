@@ -1,5 +1,6 @@
  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
+<<<<<<< HEAD
 /* body {
   display: flex;
   justify-content: center;
@@ -11,9 +12,11 @@
   justify-content: center;
 
 }
+=======
+>>>>>>> dce6d60258eef8ec7472fea2e43b2f207008b36c
 
-p {
-  max-width: 800px;
-  /* Adjust the value based on your desired text width */
-  margin: 0;
-}
+ .aboutinfo{
+display: flex;
+justify-content: center;
+max-width: 150px;
+ }

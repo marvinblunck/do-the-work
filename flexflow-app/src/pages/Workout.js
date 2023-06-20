@@ -25,8 +25,7 @@ console.log(data)
   // ]}
   return (
     <div>
-      <h1>Workouts Page</h1>
-      
+      <h1 class="workoutTitle">Workouts Page</h1>
       {/* Add your workouts content and components */}
       {/* <div class="workoutGrid">
         <div class="workoutDay">
