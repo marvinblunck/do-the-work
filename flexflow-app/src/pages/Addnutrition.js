@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useMutation, useQuery } from '@apollo/client';
 import { ADD_NUTRITION } from '../utils/mutations';
+import "./Workout.css";
+
 function Nutrition() {
   let { name } = useParams();
   const [addNutrition, { error }] = useMutation(ADD_NUTRITION)
@@ -22,23 +24,24 @@ function Nutrition() {
   };
   return (
     <div>
-      <h1> Add Nutrition</h1>
-      <h3> {name}</h3>
-      <div>
-        <label>Sleep</label>
-        <input value={sleep} onChange={(e) => setSleep(e.target.value)}></input>
+      <h1 className="title">Add Nutrition</h1>
+      <h3 className="name">{name}</h3>
+      <div className="inputContainer">
+        <label className="label">Sleep</label>
+        <input className="input" value={sleep} onChange={(e) => setSleep(e.target.value)}></input>
       </div>
-      <div>
-        <label>Water</label>
-        <input value={water} onChange={(e) => setWater(e.target.value)}></input>
+      <div className="inputContainer">
+        <label className="label">Water</label>
+        <input className="input" value={water} onChange={(e) => setWater(e.target.value)}></input>
       </div>
-      <div>
-        <label>Weight</label>
-        <input value={weight} onChange={(e) => setWeight(e.target.value)}></input>
+      <div className="inputContainer">
+        <label className="label">Weight</label>
+        <input className="input" value={weight} onChange={(e) => setWeight(e.target.value)}></input>
       </div>
-      <button onClick={saveNutrition}>Save</button>
+      <button className="saveButton" onClick={saveNutrition}>Save</button>
     </div>
   )
+  
 
 }
 
