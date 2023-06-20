@@ -46,9 +46,9 @@ console.log(data)
         {userData?.nutrition?.map(nutrition => (
         <div class="nutritionDay">
           <h2>{nutrition.day}</h2>
-          <p>Sleep: {nutrition.sleep}</p>
-          <p>Water: {nutrition.water}</p>
-          <p>Weight: {nutrition.weight}</p>
+          <p className='nutritionP'>Sleep: {nutrition.sleep}</p>
+          <p className='nutritionP'>Water: {nutrition.water}</p>
+          <p className='nutritionP'>Weight: {nutrition.weight}</p>
         </div>
         ))}
       </div>
